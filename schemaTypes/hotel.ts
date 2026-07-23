@@ -14,6 +14,13 @@ export default defineType({
     }),
 
     defineField({
+      name: "location",
+      title: "Location",
+      type: "string",
+      validation: Rule => Rule.required(),
+    }),
+
+    defineField({
       name: "description",
       title: "Description",
       type: "text",
@@ -32,6 +39,7 @@ export default defineType({
   preview: {
     select: {
       title: "title",
+      subtitle: "location",
       media: "image",
     },
   },
